@@ -10,6 +10,7 @@ function calculateTip(){
     
     //make sure things are numbers
     if(isNaN(paycheckAmount) || isNaN(tipPercent)|| isNaN(numPaychecks)){
+        document.getElementById('message').scrollIntoView();
         return document.getElementById("message").style.display = "block";
     }
      //make sure required fields are filled
@@ -53,6 +54,7 @@ function backButton(){
 }
 //open the about box
 function aboutSite(){
+    document.getElementById('about').scrollIntoView();
      return document.getElementById("about").style.display = "block";
 }
 
