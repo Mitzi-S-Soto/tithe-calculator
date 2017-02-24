@@ -147,7 +147,7 @@ button: active{
     height: 235px;
     padding: 15px 25px;
     background: #fff;
-    position: absolute;
+    position: fixed;
     z-index: 3;
     left: 0;
     right: 0;
@@ -171,7 +171,7 @@ button: active{
     height: 250px;
     padding: 15px 25px 15px 15px;
     background: #fff;
-    position: absolute;
+    position: fixed;
     z-index: 3;
     left: 0;
     right: 0;
