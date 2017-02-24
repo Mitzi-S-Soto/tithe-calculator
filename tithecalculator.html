@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <title>Tithe/Tip Calculator</title>
+    <!--Make website view correctly on mobile-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--Normalize CSS-->
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <!--Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+<body>
+
+    <div id="container">
+        
+    <h1>Tithe Calculator</h1>
+        
+        <div id="calculator">
+            <form>
+                <!--your bill/paycheck amount-->
+                <label>How much did you earn?*
+                <br />
+                   $&nbsp;<input type="text" id="paycheckAmount"/>
+                </label>
+                <!--how much to give options-->
+                <label>How much will you give?*<br />
+                    <select id="giving">
+                    <option disabled selected value="0">---Choose an option --</option>
+                        <option value="0.3">30% -- Flowing w/Milk &amp; Honey</option>
+                        <option value="0.2">20% -- My Cup Runneth Over</option>
+                        <option value="0.15">15% -- Feeling Blessed</option>
+                    <option value="0.1">10% -- Being Obedient</option>
+                        <option value="0.05">5% -- &#8593;He asked for 10% &#8593;</option>
+                    </select>
+                    <br />
+                    <!--or put in your own amount-->
+                    or&nbsp;<input type="text" id="tipPercent"/>&nbsp;&#37;
+                </label>
+                <!--options if you're tipping-->
+                <h4 class="tipping">Tipping:</h4>
+                <hr/>
+                <!--split the bill-->
+                <label id="split">
+                    Split the bill?&nbsp;
+                <input type="text" id="numPaychecks" /> &nbsp;ways
+                </label>
+                <!--calculate total button-->
+                <button type="button" id="calculate">Let's Give!</button>
+            </form>
+            
+        </div><!--calculator-->
+        
+        <div id="totalTithe">
+            <!--your calculated total will be here-->
+            <sup>$</sup><span id="tithe">0.00</span>
+            <!--will show if split bill was used-->
+            <small id="each">each</small>
+        </div><!--totalTithe-->
+        <br />
+        <!--about text at bottom of calculator-->
+        <div id="aboutBox" >
+            <small id="aboutSite"><a>About</a></small>
+        </div><!--endaboutbox-->
+    </div><!--end container-->
+<!--hidden messages-->
+    
+<!--error message-->
+<div id="message" class="fade">
+    <h4>Dear sibling in Christ:</h4>
+    <p>You seemed to have neglected to put in some required information or did not enter a number.</p>
+    <button type="button" id="ok">Ok</button>
+</div><!--end message-->
+<!--about message-->
+<div id="about" class="fade">
+    <h4>About</h4>
+    <ul>
+        <li><h5>Created by:</h5></li>
+        <li><a href="http://mitzisunshine.com" target="_blank">Mitzi S. Soto</a></li>
+        <li><h5>GitHub Respitory:</h5></li>
+        <li><a href="https://github.com/Mitzi-S-Soto/tithe-calculator" target="_blank">https://github.com/Mitzi-S-Soto/tithe-calculator</a></li>
+    </ul>
+    <button type="button" id="back">Back</button>
+</div><!--end about-->
+<!--link to javascript-->
+<script type="text/javascript" src="tithecalc.js"></script>
+</body> 
+</html>
